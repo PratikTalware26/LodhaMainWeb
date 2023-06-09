@@ -1,0 +1,22 @@
+.about-cont{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.w-40{
+    width: 43%;
+}
+.about-knowmore-btn{
+    color: #bd9234;
+    border:1px solid #bd9234;
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+}
+@media screen and (max-width:770px) {
+    .about-cont{
+        flex-direction: column;
+        padding: 20px 0;
+    }   
+  }

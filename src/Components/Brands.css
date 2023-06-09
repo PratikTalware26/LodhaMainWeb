@@ -1,0 +1,43 @@
+.custom-card{
+    width: 340px;
+}
+.g-20{
+    gap:20px;
+}
+.brand-card-cont{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.brand-btn{
+    width: 100%;
+    padding: 10px;
+}
+/* Brands.css */
+
+.custom-card {
+    width: 340px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .brand-btn {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: -50px; /* Initially position the button below the card */
+    left: 0;
+    transition: bottom 0.3s ease; /* Add a transition effect for smooth animation */
+    color: #bd9234;
+    background: #edd29a;
+    border: none;
+  }
+  
+  .custom-card:hover .brand-btn {
+    bottom: 0; /* Move the button up when hovering over the card */
+  }
+  
+  .custom-card:hover img {
+    transform: translateY(-50px); /* Move the image up along with the button */
+    transition: transform 0.3s ease; /* Add a transition effect for smooth animation */
+  }
+  
