@@ -1,3 +1,26 @@
 .slide-item{
     margin: 0 10px;
 }
+.projects-cont{
+    height: 400px !important;
+}
+.projects-cont .card{
+    height:70% !important;
+}
+.projects-cont h4{
+    color: #bd9234;
+}
+.projects-cont .swiper-slide{
+    padding: 5px;
+}
+.card-cont{
+    box-shadow: 1px 1px 2px 1px #ccc;
+}
+.projects-cont .swiper-button-prev, .swiper-button-next{
+    color: var(--colorPrimary) !important;
+}
+@media screen and (max-width:500px) {
+    .project-cont-parent{
+        padding: 10px !important;
+    }
+}

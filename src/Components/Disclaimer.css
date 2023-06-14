@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+.disclaimer-cont{
+    background:black;
+    color: white;
+    padding: 10px 110px;
+    text-align: center;
+    padding-bottom: 40px;
+    border-top: 0.5px solid grey;
+    /* padding-right: 15px; */
+    /* padding-left: 15px; */
+}
+.disclaimer-head{
+    text-align: center;
+    padding: 10px;
+}
+.disclaimer-head span, .disclaimer span{
+    color: #8a5f1d;
+}
+.disclaimer{
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+@media screen and (max-width:800px) {
+    .disclaimer-cont{
+        padding: 10px !important;
+      }    
+}

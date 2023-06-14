@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Poppins&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family: 'Geologica', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --colorPrimary:#bd9234;
+}
+a{
+  text-decoration: none !important;
+  color: inherit !important;
+}
+body{
+  position: relative;
 }

@@ -1,0 +1,18 @@
+.blogs-cont{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.blogs-cont .card{
+    flex-basis: calc(450px - 10px);
+    /* height: 340px; */
+}
+.blogs-cont .img-cont{
+    /* flex: 1; */
+    height: 300px;
+}
+.blogs-cont h6{
+    color: var(--colorPrimary);
+}

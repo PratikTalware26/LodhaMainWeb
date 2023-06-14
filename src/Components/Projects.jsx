@@ -1,88 +1,108 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./Projects.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from "react";
+import "./Projects.css"
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import project from "../assets/WhatsApp Image 2023-06-09 at 12.10.51 PM.jpeg";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import project2 from "../assets/project2.jpeg"
+import project7 from "../assets/project7.jpeg"
+import project12 from "../assets/project12.jpeg"
+import project13 from "../assets/project13.jpeg"
+
+
+// import required modules
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 const Projects = () => {
-  const [progress, setProgress] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const sliderRef = useRef(null);
+    const [windowWidth, setWindowWidth]= useState(window.innerWidth)
+    const [slides, setSlides]= useState(3)
 
-  const settings = {
-    autoplay: true,
-    autoplaySpeed: 3000,
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    beforeChange: (current, next) => {
-      setProgress(0); // Reset progress when slide changes
-      setCurrentSlide(next); // Update current slide index
-    },
-    afterChange: (current) => {
-      setCurrentSlide(current); // Update current slide index
-      setProgress(0); // Reset progress when slide changes
-    },
-  };
+    useEffect(()=>{
+        const handleResize=()=>{
+            setWindowWidth(window.innerWidth)
+        }
+        window.addEventListener("resize", handleResize)
+        return ()=>{
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prevProgress) => {
-        const nextProgress = prevProgress + 1;
-        return nextProgress <= 100 ? nextProgress : 0;
-      });
-    }, settings.autoplaySpeed / 100);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const totalSlides = Math.ceil(settings.slidesToShow / settings.slidesToScroll);
+    useEffect(()=>{
+        if(windowWidth<700){
+            setSlides(1)
+        }else if(windowWidth<1050){
+            setSlides(2)
+        }else{
+            setSlides(3)
+        }
+    },[windowWidth])
 
   return (
+    <div className="p-5 project-cont-parent" id="projects">
+    <div><h2 className="text-center p-2">Feature Projects</h2></div>
     <div>
-      <div>
-        <h2>Featured Projects</h2>
-      </div>
-      <div>
-        <Slider ref={sliderRef} {...settings}>
-          <div>
-            <div className="card slide-item">
-              <img src={project} alt="" />
-            </div>
+      <Swiper
+        slidesPerView={slides}
+        spaceBetween={20}
+        pagination={{
+          type: "fraction",
+        }}
+        autoplay={{
+            delay:5000
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper projects-cont"
+      >
+        <SwiperSlide>
+        <div className="h-100 card-cont">
+          <div className="card">
+            <img src={project2} alt="" className="w-100 h-100"/>
           </div>
-          <div>
-            <div className="card slide-item">
-              <img src={project} alt="" />
-            </div>
+          <div className="p-1">
+          <h4>Lodha Panache</h4>
+          <p>Great Life. Great Location.</p>
           </div>
-          <div>
-            <div className="card slide-item">
-              <img src={project} alt="" />
-            </div>
           </div>
-          {/* Add more slides as needed */}
-        </Slider>
-
-        <div className="slide-navigation">
-          <button className="navigation-button" onClick={() => sliderRef.current.slickPrev()}>
-            Prev
-          </button>
-          <span className="slide-count">
-            Slide {currentSlide + 1} of {totalSlides}
-          </span>
-          <button className="navigation-button" onClick={() => sliderRef.current.slickNext()}>
-            Next
-          </button>
-        </div>
-
-        <div className="progress-bar">
-          <div className="progress" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className="h-100 card-cont">
+          <div className="card">
+            <img src={project7} alt="" className="w-100 h-100"/>
+          </div>
+          <div className="p-1">
+          <h4>Lodha Belmondo</h4>
+          <p>Luxury Chic Studios Set in a 100- Acre Riverside Resort</p>
+          </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="h-100 card-cont">
+          <div className="card">
+            <img src={project12} alt="" className="w-100 h-100"/>
+          </div>
+          <div className="p-1">
+          <h4>Lodha Giardino</h4>
+          <p>Creators of the world's finest developments coming soon to kharadi</p>
+          </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="h-100 card-cont">
+          <div className="card">
+            <img src={project13} alt="" className="w-100 h-100"/>
+          </div>
+          <div className="p-1">
+          <h4>Lodha bella vita</h4>
+          <p>The Pride of Owning A Lodha Home</p>
+          </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
     </div>
   );
 };

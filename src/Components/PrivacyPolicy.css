@@ -1,0 +1,11 @@
+.privacy-head{
+    padding: 40px;
+    background: #1D2D3D;
+    color: white;
+}
+.privacy-btn{
+    background: var(--colorPrimary);
+}
+.privacy-btn:hover{
+    background-color: gold;
+}

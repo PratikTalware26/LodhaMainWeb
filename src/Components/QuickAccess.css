@@ -1,0 +1,14 @@
+.quick-page-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 40px;
+    font-weight: 700;
+}
+@media screen and (max-width:700px) {
+    .quick-cont{
+        display: none;
+    }
+}

@@ -1,0 +1,18 @@
+.blog-list-cont .card{
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 10px 0;
+}
+.blog-list-cont .card a > div:first-child{
+    height: 70%;
+}
+.blog-list-parent{
+    background: whitesmoke;
+    padding: 10px 20px;
+    height: 100vh;
+    overflow: scroll;
+}
+.blog-list-cont .card h6, .blog-list-parent h2{
+    color: var(--colorPrimary);
+}

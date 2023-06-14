@@ -1,0 +1,31 @@
+.spec-blog-cont {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  /* padding: 10px; */
+}
+.blog-one-cont {
+  width: 60%;
+  height: 100vh;
+  overflow: scroll;
+  padding: 15px;
+}
+.blog-one-cont h1{
+    color: var(--colorPrimary);
+}
+
+@media screen and (max-width:900px) {
+    .spec-blog-cont{
+        flex-direction: column;
+    }
+    .blog-one-cont{
+        width: auto !important;
+        height: auto !important;
+    }
+    .blog-list-parent{
+        height: auto !important;
+    }
+    .blog-list-cont .card{
+        width: auto !important;
+    }
+}
