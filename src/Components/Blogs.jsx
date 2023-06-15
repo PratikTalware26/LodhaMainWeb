@@ -9,6 +9,17 @@ import lodhaPanache from "../assets/lodhaPanache.jpeg";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
+  const handleBlogLinkClick = () => {
+    const isMobileView = window.innerWidth <= 900; // Define the breakpoint for mobile view
+    if (isMobileView) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const blogListParent = document.querySelector(".blog-list-parent");
+      if (blogListParent) {
+        blogListParent.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <div id="blogs">
       <div>
@@ -16,7 +27,7 @@ const Blogs = () => {
       </div>
       <div className="blogs-cont">
         <div className="card">
-        <Link to="/lodha_palava">
+        <Link to="/lodha_palava" onClick={handleBlogLinkClick}>
           <div className="img-cont">
             <img src={lodhaPalava} alt="" className="w-100 h-100" />
           </div>
@@ -27,7 +38,7 @@ const Blogs = () => {
         </Link>
         </div>
         <div className="card">
-        <Link to="/lodha_bella_vita">
+        <Link to="/lodha_bella_vita" onClick={handleBlogLinkClick}>
           <div className="img-cont">
             <img src={lodhaBellaVita} alt="" className="w-100 h-100" />
           </div>
@@ -38,7 +49,7 @@ const Blogs = () => {
         </Link>
         </div>
         <div className="card">
-        <Link to="/lodha_belmondo">
+        <Link to="/lodha_belmondo" onClick={handleBlogLinkClick}>
           <div className="img-cont">
             <img src={lodhaBelmondo} alt="" className="w-100 h-100" />
           </div>
@@ -49,7 +60,7 @@ const Blogs = () => {
         </Link>
         </div>
         <div className="card">
-        <Link to="/lodha_builders">
+        <Link to="/lodha_builders" onClick={handleBlogLinkClick}>
           <div className="img-cont">
             <img src={lodhaBuilders} alt="" className="w-100 h-100" />
           </div>
@@ -60,7 +71,7 @@ const Blogs = () => {
         </Link>
         </div>
         <div className="card">
-        <Link to="/lodha_giardino">
+        <Link to="/lodha_giardino" onClick={handleBlogLinkClick}>
           <div className="img-cont">
             <img src={lodhaGiardino} alt="" className="w-100 h-100" />
           </div>
@@ -73,7 +84,7 @@ const Blogs = () => {
         </Link>
         </div>
         <div className="card">
-        <Link to="/lodha_panache">
+        <Link to="/lodha_panache" onClick={handleBlogLinkClick}>
           <div className="img-cont">
             <img src={lodhaPanache} alt="" className="w-100 h-100" />
           </div>
