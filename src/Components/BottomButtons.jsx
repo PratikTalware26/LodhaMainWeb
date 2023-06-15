@@ -148,7 +148,7 @@ const BottomButtons = () => {
             </button>
           </div>
           <div>
-            <button>₹ Cost Sheet</button>
+            <button onClick={()=>setFormpopup(!formPopup)}>₹ Cost Sheet</button>
           </div>
           <div>
             <a href="https://api.whatsapp.com/send?phone=919730003331&text=Hello!%20I%20would%20like%20to%20know%20more%20about%20VTP%20Earth%201%20Project">

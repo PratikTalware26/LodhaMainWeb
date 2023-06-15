@@ -18,4 +18,5 @@
     background: var(--colorPrimary);
     border: 1px solid white;
     color: white;
+    font-size: small;
 }
