@@ -153,7 +153,7 @@ const Navbar = () => {
             <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#home">Home</a></li>
             <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#projects">Projects</a></li>
             <Link to="/lodha_palava"><li>Blogs</li></Link>
-            <li>Contact Us</li>
+            <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#enquiry">Contact Us</a></li>
           </ul>
         </div>
       </div>

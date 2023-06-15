@@ -110,7 +110,7 @@ const Brands = () => {
 
   return (
     <div className="p-5" id="brands">
-        <div><h2 className="text-center">Our Brands</h2></div>
+        <div><h2 className="text-center p-2">Our Brands</h2></div>
     <div className="d-flex g-20 brand-card-cont">
       <div className="card custom-card">
         <div><img src={brandLogo} alt="" className="w-100 h-100"/></div>

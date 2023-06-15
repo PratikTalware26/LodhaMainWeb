@@ -15,7 +15,7 @@ const Thanks = () => {
             <div className="thankyou-cont">
               <h1>
                 Thank you for contacting us!<br></br>
-                Our official channel partner from Brickfolio Pvt Ltd will get back to
+                Our Sales Team will get back to
                 you shortly!!
               </h1>
               <h2 onClick={handleClick}>&lt; Back to main page</h2>

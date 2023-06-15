@@ -20,7 +20,7 @@ const Blogs = () => {
           <div className="img-cont">
             <img src={lodhaPalava} alt="" className="w-100 h-100" />
           </div>
-          <div>
+          <div className="p-1">
             <h6>Unlocking the Marvels of Palava:</h6>
             <p>A Haven of Lifestyle and Luxury by Lodha</p>
           </div>
@@ -31,7 +31,7 @@ const Blogs = () => {
           <div className="img-cont">
             <img src={lodhaBellaVita} alt="" className="w-100 h-100" />
           </div>
-          <div>
+          <div className="p-1">
             <h6>Discover the Enchanting Lifestyle of Lodha Kharadi:</h6>
             <p>A Paradise in Pune</p>
           </div>
@@ -42,7 +42,7 @@ const Blogs = () => {
           <div className="img-cont">
             <img src={lodhaBelmondo} alt="" className="w-100 h-100" />
           </div>
-          <div>
+          <div className="p-1">
             <h6>Luxurious Lifestyle at Lodha Belmondo Pune:</h6>
             <p>Location Benefits and Project Highlights</p>
           </div>
@@ -53,7 +53,7 @@ const Blogs = () => {
           <div className="img-cont">
             <img src={lodhaBuilders} alt="" className="w-100 h-100" />
           </div>
-          <div>
+          <div className="p-1">
             <h6>Luxurious Living Redefined:</h6>
             <p>Exploring Lodha Builders' Exquisite Projects</p>
           </div>
@@ -64,7 +64,7 @@ const Blogs = () => {
           <div className="img-cont">
             <img src={lodhaGiardino} alt="" className="w-100 h-100" />
           </div>
-          <div>
+          <div className="p-1">
             <h6>
               Exploring the Key Features and Location Benefits of Lodha Pune
             </h6>
@@ -77,7 +77,7 @@ const Blogs = () => {
           <div className="img-cont">
             <img src={lodhaPanache} alt="" className="w-100 h-100" />
           </div>
-          <div>
+          <div className="p-1"> 
             <h6>Luxurious Living at Lodha Panache:</h6>
             <p>Embrace Serenity and Opulence</p>
           </div>

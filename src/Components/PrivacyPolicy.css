@@ -5,6 +5,7 @@
 }
 .privacy-btn{
     background: var(--colorPrimary);
+    color: white;
 }
 .privacy-btn:hover{
     background-color: gold;

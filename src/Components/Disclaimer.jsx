@@ -6,11 +6,6 @@ const Disclaimer = () => {
   return (
     <div className="disclaimer-cont">
       <div>
-        <h3 className="disclaimer-head">
-        LodhaGroup MahaRERA No:
-        </h3>
-      </div>
-      <div>
         <p className="disclaimer">
           Disclaimer & <Link to="/privacy"><span>Privacy Policy</span></Link> : The content is for
           information purposes only and does not constitute an offer to avail of

@@ -3,9 +3,9 @@ import "./QuickAccess.css"
 
 const QuickAccess = () => {
   return (
-    <div className='quick-cont p-2'>
+    <div className='quick-cont p-4'>
         <div><h2 className='text-center'>Quick Access</h2></div>
-        <div className='p-2'>
+        <div>
             <ul className='quick-page-links'>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
